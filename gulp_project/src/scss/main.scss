@@ -1,0 +1,27 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor";
+@import "settings";
+
+// Import Fonts
+
+/* ------------- Wrapper ------------- */
+.wrapper {
+	max-width: var(--maxw);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	// display: grid;
+	// // grid-template-areas: "header" "content" "footer";
+	// grid-template: auto 1fr auto;
+	min-height: 100vh;
+}
+/* ------------- Footer ------------- */
+.footer {
+	margin-top: auto; // ---------
+}
+// ===========
+@import "./components/main";
+// ===========
+@import "media";

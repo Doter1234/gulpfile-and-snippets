@@ -1,0 +1,38 @@
+@mixin close($xy: 30px, $m: 0px, $bgc: rgba(0,0,0,.6), $hbgc: rgba(0,0,0,1), $lh: 2px, $bdr: 5px) {
+	margin: $m;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: $xy;
+	height: $xy;
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%) rotate(45deg);
+		width: 100%;
+		height: $lh;
+		border-radius: $bdr;
+		background-color: $bgc;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%) rotate(-45deg);
+		width: 100%;
+		height: $lh;
+		border-radius: $bdr;
+		background-color: $bgc;
+	}
+	&:hover {
+		&::after {
+			background-color: $hbgc;
+		}
+		&::before {
+			background-color: $hbgc;
+		}
+	}
+}

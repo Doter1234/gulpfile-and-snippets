@@ -1,0 +1,16 @@
+@mixin adaptive-value($property, $startSize, $minSize, $type: 1) {
+	@if $type == 1 {
+		@media (max-width: var(--containerWidth)) {
+			$addSize: $startSize - $minSize;
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{var(--containerWidth) - 320px}));
+		}
+		@media (min-width: var(--containerWidth) + 1px) {
+			$addSize: $startSize - $minSize;
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((var(--containerWidth) - 320px) / #{var(--containerWidth) - 320px}));
+		}
+	} @else {
+		$maxStartSize: var(--maxw) / (var(--containerWidth) / $startSize);
+		$addSize: $maxStartSize - $minSize;
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{var(--maxw) - 320px}));
+	}
+}
