@@ -1,0 +1,169 @@
+{
+	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"MENU": {
+		"scope": "html,kit",
+		"prefix": "menu",
+		"body": [
+			"<a class=\"header__logo\" href=\"#\">",
+			"    <img src=\"img/BUSINESS.png\" alt=\"NOT_FOUND\">",
+			"</a>",
+			"<nav class=\"header__nav nav\">",
+			"    <div class=\"nav__burg\">",
+			"        @include('../RMCS/burger.html')",
+			"    </div>",
+			"    <div class=\"header__menu nav__menu\">",
+			"        <a href=\"#\" class=\"nav__link nav__link-active\"><span>Home</span></a>",
+			"        <a href=\"#\" class=\"nav__link\"><span>About</span></a>",
+			"        <a href=\"#\" class=\"nav__link\"><span>...</span></a>",
+			"        <a href=\"#\" class=\"nav__link nav__link-icon\"><span>Contact</span></a>",
+			"    </div>",
+			"</nav>"
+		],
+		"description": "MENU"
+	},
+	//=================================================//
+	"Drop-Down-Menu": {
+		"scope": "html,kit",
+		"prefix": "ddm",
+		"body": [
+			"<!-- Drop-Down-Menu --><div class=\"ddm\"><ul><li><a href=\"#\">главная</a></li><li><a href=\"#\">продукция</a></li><li><a href=\"#\">услуги</a><i class=\"arrow\"></i><ul><li><a href=\"#\">Услуга 1</a></li><li><a href=\"#\">Услуга 2</a></li><li><a href=\"#\">Услуга 3</a><i class=\"arrow\"></i><ul><li><a href=\"#\">Услуга 1</a></li><li><a href=\"#\">Услуга 2</a></li><li><a href=\"#\">Услуга 3</a><i class=\"arrow\"></i><ul><li><a href=\"#\">Услуга 1</a></li><li><a href=\"#\">Услуга 2</a></li><li><a href=\"#\">Услуга 3</a><i class=\"arrow\"></i><ul><li><a href=\"#\">Услуга 1</a></li><li><a href=\"#\">Услуга 2</a></li><li><a href=\"#\">Услуга 3</a></li></ul></li></ul></li></ul></li></ul></li><li><a href=\"#\">новости</a></li><li><a href=\"#\">контакты</a></li></ul></div>>"
+		],
+		"description": "Drop-Down-Menu"
+	},
+	//=================================================//
+	"Tabs": {
+		"scope": "html,kit",
+		"prefix": "tabs",
+		"body": [
+			"<div class=\"tabs\"><div class=\"tabs__header\"><div class=\"tabs__nav active\" data-tab=\"tab-1\">Tab 1</div><div class=\"tabs__nav\" data-tab=\"tab-2\">Tab 2</div><div class=\"tabs__nav\" data-tab=\"tab-3\">Tab 3</div></div><div class=\"tabs__body\"><div class=\"tabs__content tab-1 active\">1) Tab Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore laudantium cum, natus solutaquis at doloribus sequi numquam? Eveniet iusto facilis at quo mollitia accusamus sit dolor blanditiisnesciunt maxime.</div><div class=\"tabs__content tab-2\">2) Tab Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error perferendis amet doloribus namvoluptate, facere quaerat vero assumenda fugiat sit officiis dolores expedita tempore voluptatum minusdeleniti facilis sed numquam dolore. Quasi harum eligendi, placeat assumenda cupiditate sed eos idimpedit. Blanditiis architecto optio magnam dignissimos ut pariatur assumenda labore?</div><div class=\"tabs__content tab-3\">3) Tab Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut impedit iure ex reiciendis error tempore totam! Sequi, dignissimos? Excepturi eligendi esse, impedit tenetur repellendus, delectus cum quos natus sunt veritatis possimus eum itaque ipsam, repudiandae at sit debitis veniam ut. Voluptate tenetur, error nobis officiis asperiores quos voluptates labore. Exercitationem, laudantium modi doloribus ex dolores molestias dignissimos quae et reprehenderit sunt saepe? Illum eum repudiandae quia nihil assumenda, totam similique et ullam labore quaerat molestias nesciunt quidem eaque. Omnis eum dolores veniam soluta reiciendis est rerum inventore velit quasi ipsam?</div></div></div>"
+		],
+		"description": "For tabs of styles"
+	},
+	//=================================================//
+	"Background_image": {
+		"scope": "html,kit",
+		"prefix": "ibg",
+		"body": [
+			"<div class=\"$1__ibg ibg\">",
+			"    <img src=\"./img/\" alt=\"NOT_FOUND\" class=\"$1__ibg img-x\">",
+			"</div>"
+		],
+		"description": "Background_image"
+	},
+	//=================================================//
+	"Button_link": {
+		"scope": "html,kit",
+		"prefix": "btn",
+		"body": [
+			"<a href=\"#\" class=\"$1__btn btn\"><span>$2</span></a>"
+		],
+		"description": "Button_link"
+	},
+	//=================================================//
+	"Icon_svg": {
+		"scope": "html,kit",
+		"prefix": "svg",
+		"body": [
+			"<svg display=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+			"    <symbol id=\"svg\" viewBox=\"\">",
+			"        <g>...</g>",
+			"    </symbol>",
+			"</svg>",
+			"",
+			"<svg class=\"icon\">",
+			"    <use href=\"./img/sprite.svg#svg\"></use>",
+			"</svg>"
+		],
+		"description": "Icon_svg"
+	},
+	//=================================================//
+	"Picture": {
+		"scope": "html,kit",
+		"prefix": "pic",
+		"body": [
+			"<picture class=\"ibg__picture\">",
+			"    <source srcset=\"img/img-xs.webp 1x\" type=\"image/webp\" media=\"(max-width: 768px)\">",
+			"    <img src=\"img/img-lg.jpg\" srcset=\"\" alt=\"NOT_FOUND\">",
+			"</picture>"
+		],
+		"description": "Picture"
+	},
+	//=================================================//
+	"Swiper": {
+		"scope": "html,kit",
+		"prefix": "swiper",
+		"body": [
+			"<div class=\"swiper-container\">",
+			"    <div class=\"swiper-wrapper\">",
+			"        <div class=\"swiper-slide\">",
+			"        </div>",
+			"    </div>",
+			"    <div class=\"swiper-button-prev\"></div>",
+			"    <div class=\"swiper-button-next\"></div>",
+			"    <div class=\"swiper-pagination\"></div>",
+			"    <div class=\"swiper-scrollbar\"></div>",
+			"</div>"
+		],
+		"description": "Swiper"
+	},
+	//=================================================//
+	"Close": {
+		"scope": "html,kit",
+		"prefix": "popup",
+		"body": [
+			"<a href=\"#popup\">Отправить заявку</a>",
+			"<div id=\"transparent-fixed\"></div>",
+			"<div class=\"popup\" id=\"popup\">",
+			"    <a href=\"#transparent-fixed\" class=\"popup__area\"></a>",
+			"    <div class=\"popup__content\">",
+			"        <a href=\"#transparent-fixed\" class=\"popup__close\" style=\"font-size: 40px\"></a>",
+			"    </div>",
+			"</div>"
+		],
+		"description": "Close"
+	},
+	//=================================================//
+	"Checkbox": {
+		"scope": "html,kit",
+		"prefix": "chbox",
+		"body": [
+			"<div class=\"checkbox\">",
+			"    <input type=\"checkbox\" class=\"checkbox__input input\" id=\"checkbox_1\">",
+			"    <label class=\"checkbox__label label\" for=\"checkbox_1\">Прочитал условия пользования сайтом</label>",
+			"</div>"
+		],
+		"description": "Checkbox"
+	},
+	//=================================================//
+	"Radio": {
+		"scope": "html,kit",
+		"prefix": "radio",
+		"body": [
+			"<div class=\"radio\">",
+			"    <input type=\"radio\" name=\"male\" id=\"radio_1\" class=\"radio__input input\">",
+			"    <label class=\"radio__label label\" for=\"radio_1\">Муж</label>",
+			"</div>"
+		],
+		"description": "Radio"
+	},
+	//=================================================//
+	"Select": {
+		"scope": "html,kit",
+		"prefix": "select",
+		"body": [
+			"<div class=\"select\">",
+			"    <select>",
+			"        <option value=\"1\">Вариант 1</option>",
+			"        <option value=\"2\">Вариант 2</option>",
+			"    </select>",
+			"</div>"
+		],
+		"description": "Select"
+	}
+}

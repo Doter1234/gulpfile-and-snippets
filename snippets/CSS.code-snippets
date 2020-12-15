@@ -1,0 +1,202 @@
+{
+	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Null Style": {
+		"scope": "css,sass,scss",
+		"prefix": "nullstyle",
+		"body": [
+			"*{padding:0;margin:0;border:0}",
+			"*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}",
+			":focus,:active{outline:none}",
+			"a:focus,a:active{outline:none}",
+			"nav,footer,header,aside{display:block}",
+			"html,body{height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 10px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%",
+			"-webkit-text-size-adjust: 100%}",
+			"input,button,textarea{font-family:inherit}",
+			"input: :-ms-clear{display:none}",
+			"button{cursor:pointer}",
+			"button: :-moz-focus-inner{padding: 0;border: 0}",
+			"a,a:hover,a:visited{text-decoration:none}",
+			"ul li{list-style:none}",
+			"img{vertical-align:top;max-width: 100%;height: 100%; /*object-position:center;*/object-fit:cover}",
+			"h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}",
+		],
+		"description": "Null Style"
+	},
+	//=================================================//
+	"margin": {
+		"scope": "css,sass,scss",
+		"prefix": "mm",
+		"body": [
+			"margin: $1px $2px $3px $4px;",
+		],
+		"description": "margin"
+	},
+	//=================================================//
+	"padding": {
+		"scope": "css,sass,scss",
+		"prefix": "pp",
+		"body": [
+			"padding: $1px $2px $3px $4px;",
+		],
+		"description": "padding"
+	},
+	//=================================================//
+	"Margin is auto": {
+		"scope": "css,sass,scss",
+		"prefix": "mauto",
+		"body": [
+			"margin: auto;"
+		],
+		"description": "Margin is auto"
+	},
+	//=================================================//
+	"Line-height is auto": {
+		"scope": "css,sass,scss",
+		"prefix": "lhauto",
+		"body": [
+			"line-height: calc(1em + (1em / 3));"
+		],
+		"description": "Line-height is auto"
+	},
+	//=================================================//
+	"Menu": {
+		"scope": "css,sass,scss",
+		"prefix": "menu",
+		"body": [
+			"/* ------------- Header ------------- */",
+			".header {",
+			"    &__nav {",
+			"        display: flex;",
+			"        justify-content: space-between;",
+			"        align-items: center;",
+			"    }",
+			"}",
+			".nav {",
+			"    &__list {",
+			"        display: flex;",
+			"    }",
+			"    &__link {",
+			"        span {",
+			"            line-height: 28px;",
+			"            display: block;",
+			"            position: relative;",
+			"            &:after {",
+			"                content: \"\";",
+			"                position: absolute;",
+			"                left: 50%;",
+			"                bottom: 0;",
+			"                height: 1px;",
+			"                width: 0;",
+			"                transition: .3s;",
+			"            }",
+			"        }",
+			"        &:hover {",
+			"            span:after {",
+			"                left: 0;",
+			"                width: 100%;",
+			"            }",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "For menu of styles"
+	},
+	//=================================================//
+	"Drop-Down-Menu": {
+		"scope": "css,sass,scss",
+		"prefix": "ddm",
+		"body": [
+			".touch .ddm {.arrow {position: absolute;right: 0;top: 50%;transform: translateY(-50%) rotate(-90deg);width: 0;height: 0;border-top: 7px solid rgba(#000, 0.4);border-left: 7px solid transparent;border-right: 7px solid transparent;&.active {transform: translateY(-50%) rotate(90deg);}}& > ul {display: inline-flex;flex-direction: column;justify-content: center;li {a {text-align: center;display: block;background: #ececed;padding: 15px 30px 15px 40px;font-size: 14px;color: #454547;text-decoration: none;text-transform: uppercase;transition: 0.3s;&:hover {background: #454547;color: #fff;box-shadow: 1px 5px 10px -5px black;}}position: relative;border: 1px solid #b2b3b5;& > .open {transition: 0.3s;visibility: visible;opacity: 1; /*position: relative;*/}& > ul {position: absolute;min-width: 100%;right: -100%; /*left: 0;*/top: 0;visibility: hidden;opacity: 0;li {border: 1px solid #c7c8ca;ul {position: absolute;right: -100%; /*left: 0;*/top: 0;}a {padding: 10px;text-transform: none;background: #e4e4e5;}}}}}}.mouse .ddm {& > ul {display: inline-flex;flex-direction: column;justify-content: center;li {a {text-align: center;display: block;background: #ececed;padding: 15px 30px 15px 40px;font-size: 14px;color: #454547;text-decoration: none;text-transform: uppercase;transition: 0.3s;&:hover {background: #454547;color: #fff;box-shadow: 1px 5px 10px -5px black;}}position: relative;border: 1px solid #b2b3b5;&:hover > ul {transition: 0.3s;visibility: visible;opacity: 1; /*position: relative;*/}& > ul {position: absolute;min-width: 100%;right: -100%; /*left: 0;*/top: 0;visibility: hidden;opacity: 0;li {border: 1px solid #c7c8ca;ul {position: absolute;right: -100%; /*left: 0;*/top: 0;}a {padding: 10px;text-transform: none;background: #e4e4e5;}}}}}}"
+		],
+		"description": "For drop-down-menu of styles"
+	},
+	//=================================================//
+	"Tabs": {
+		"scope": "css,sass,scss",
+		"prefix": "tabs",
+		"body": [
+			".tabs {max-width: 700px;background: #eee;margin: 50px auto;&__header {display: flex;border-bottom: 1px solid #ccc;font-size: 1.25em;}&__nav {padding: 10px 5px;width: 100%;text-align: center;cursor: pointer;transition: 0.5s;&:hover {background: #ddd;border-bottom: 1px solid rgba(green, 0.6);}&.active {background: #ddd;border-bottom: 1px solid rgba(green, 1);}}&__body {position: relative;}&__content {background: rgba(#ddd, 0.6);padding: 25px 20px;position: absolute;visibility: hidden;opacity: 0;transition: 1s;transform-origin: top;transform: scaleY(.5);&.active {transform: scaleY(1);visibility: visible;opacity: 1;}}}"
+		],
+		"description": "For tabs of styles"
+	},
+	//=================================================//
+	"Button": {
+		"scope": "css,sass,scss",
+		"prefix": "btn",
+		"body": [
+			"/* ------------- Button ------------- */",
+			"$$btn_h: $1px;",
+			".btn {",
+			"    display: inline-block;",
+			"    height: $$btn_h;",
+			"    line-height: $$btn_h;",
+			"    overflow: hidden;",
+			"    span {",
+			"        padding: 20px 30px;",
+			"        color: #ffffff;",
+			"        z-index: 2;",
+			"    }",
+			"    position: relative;",
+			"    &:after {",
+			"        content: \"\";",
+			"        position: absolute;",
+			"        width: 0;",
+			"        height: 100%;",
+			"        left: 50%;",
+			"        top: 0;",
+			"        transition: all 0.3s ease;",
+			"    }",
+			"    &:hover {",
+			"        &:after {",
+			"            left: 0;",
+			"            width: 100%;",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "For button of styles"
+	},
+	//=================================================//
+	"Popup": {
+		"scope": "css,sass,scss",
+		"prefix": "popup",
+		"body": [
+			"#popup {background-color: rgba(0,0,0,.7);opacity: 0;visibility: hidden;position: fixed;top: 0;left: 0;width: 100%;height: 100%;overflow: auto;transition: .3s;}.popup__content {padding: 20px;background-color: #000;margin: 20px 0px 20px 50%;display: flex;flex-direction: column;justify-content: center;transform: translate(-50%);width: calc(100% - 40px);min-width: 320px;color: white;}#popup:target {opacity: 1 !important;visibility: visible !important;}.popup__close {@include close(5px, 30px, rgba(255,255,255,.6), rgba(255,255,255,1));}#transparent-fixed {position: fixed;left: 0;top: 0;visibility: hidden;}.popup__area {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}"
+		],
+		"description": "For popup of styles"
+	},
+	//=================================================//
+	"Checkbox": {
+		"scope": "css,sass,scss",
+		"prefix": "chbox",
+		"body": [
+			".checkbox {position: relative;&__label {&::before {content: \"\";display: block;width: 20px;height: 20px;border: 1px solid #ccc;background-color: #fff;border-radius: 3px;position: absolute;top: 0;left: 0;z-index: 1;transition: all 0.1s linear;}&::after {content: \"\";display: block;width: 14.5px;height: 14.5px;background: url(\"../img/check.png\") center / 14.5px 14.5px no-repeat;opacity: 0;position: absolute;top: 2.8px;left: 2.3px;z-index: 2;transition: opacity 0.1s linear;}}&__input {&:checked + .checkbox__label::before {background-color: #49d120;border-color: #319612;}&:checked + .checkbox__label::after {opacity: 1;}&:focus {}&:disabled {/* box-shadow: 0 0 0 .1em #9b9b9b; */}&:checked:disabled {/* background-color: #9b9b9b; */}}}"
+		],
+		"description": "For checkbox of styles"
+	},
+	//=================================================//
+	"Radio": {
+		"scope": "css,sass,scss",
+		"prefix": "radio",
+		"body": [
+			":root {--one: 15px;}.radio {position: relative;&__label {&::before {content: \"\";display: block;width: var(--one);height: var(--one);border: 1px solid #ccc;background-color: #fff;border-radius: 50%;position: absolute;top: 0;left: 0;z-index: 1;transition: all 0.1s linear;}&::after {content: \"\";display: block;width: calc(var(--one) - (var(--one) / 5));height: calc(var(--one) - (var(--one) / 5));background-color: #49d120;border-radius: 50%;opacity: 0;position: absolute;top: calc((var(--one) - (var(--one) / 5)) / 6);left: calc((var(--one) - (var(--one) / 5)) / 6);z-index: 2;transition: opacity 0.1s linear;}}&__input {&:checked + .radio__label::before {border-color: #319612;}&:checked + .radio__label::after {opacity: 1;}&:focus {}&:disabled {/* box-shadow: 0 0 0 .1em #9b9b9b; */}&:checked:disabled {/* background-color: #9b9b9b; */}}}"
+		],
+		"description": "For radio of styles"
+	},
+	//=================================================//
+	"Select": {
+		"scope": "css,sass,scss",
+		"prefix": "select",
+		"body": [
+			".select {position: relative;margin-bottom: 16px;&::after {content: \"\";display: block;border-style: solid;border-width: 6px 5px 0 5px;border-color: #000 transparent transparent transparent;transform: translateY(-40%);pointer-events: none;position: absolute;top: 50%;right: 16px;z-index: 1;}select {cursor: pointer;display: block;width: 100%;padding: 0.75em 2em 0.75em 1em;background: none;border: 1px solid #ccc;border-radius: 3px;-webkit-appearance: none;appearance: none;font-size: 16px;color: #444;&:focus {outline: 0;border-color: #0891e6;}}}"
+		],
+		"description": "For select of styles"
+	}
+	//=================================================//
+}
