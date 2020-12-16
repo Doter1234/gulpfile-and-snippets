@@ -1,16 +1,25 @@
-@mixin adaptive-value($property, $startSize, $minSize, $type: 1) {
-	@if $type == 1 {
-		@media (max-width: var(--containerWidth)) {
+@mixin adaptive-value($property, $startSize, $minSize, $type: 0) {
+	$maxw: var(--maxw);
+	$minw: var(--maxw) + 1;
+	@if $type == 0 {
+		@media (max-width: $maxw + px) {
 			$addSize: $startSize - $minSize;
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{var(--containerWidth) - 320px}));
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{var(--maxw) - 320}));
 		}
-		@media (min-width: var(--containerWidth) + 1px) {
+		@media (min-width: $minw + px) {
 			$addSize: $startSize - $minSize;
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((var(--containerWidth) - 320px) / #{var(--containerWidth) - 320px}));
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((var(--maxw) - 320px) / #{var(--maxw) - 320}));
 		}
 	} @else {
-		$maxStartSize: var(--maxw) / (var(--containerWidth) / $startSize);
+		@media (max-width: $maxw + px) {
+		$maxStartSize: var(--maxw) / (var(--minw) / $startSize);
 		$addSize: $maxStartSize - $minSize;
-		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{var(--maxw) - 320px}));
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{var(--maxw) - 320}));
+		}
+		@media (min-width: $minw + px) {
+		$maxStartSize: var(--maxw) / (var(--minw) / $startSize);
+		$addSize: $maxStartSize - $minSize;
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((var(--maxw) - 320px) / #{var(--maxw) - 320}));
+		}
 	}
 }
