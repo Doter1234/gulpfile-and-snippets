@@ -8,7 +8,7 @@ let isMobile = {
 };
 
 if (isMobile.any()) {
-	$body.classList.add('touch')
+	document.body.classList.add('touch')
 	let arrow = document.querySelectorAll('.arrow');
 	for (let i = 0; i < arrow.length; i++) {
 		let nextSubmenu = arrow[i].nextElementSibling;
@@ -18,5 +18,5 @@ if (isMobile.any()) {
 		});
 	}
 } else {
-	$body.classList.add('mouse');
+	document.body.classList.add('mouse');
 }
